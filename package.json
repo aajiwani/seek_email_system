@@ -1,0 +1,32 @@
+{
+  "name": "seek_email_system",
+  "version": "1.0.0",
+  "description": "A test repo for SEEK Asia",
+  "main": "index.js",
+  "scripts": {
+    "test":
+      "find ./tests -name '*spec.js' | xargs nyc --reporter=html --reporter=text mocha -R spec --require babel-core/register",
+    "start": "./node_modules/babel-cli/bin/babel-node.js index.js",
+    "link_modules": "cd src && npm link && cd .. && npm link @app/src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aajiwani/seek_email_system.git"
+  },
+  "keywords": ["node"],
+  "author": "Amir Ali Jiwani <amirali.jiwani89@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aajiwani/seek_email_system/issues"
+  },
+  "homepage": "https://github.com/aajiwani/seek_email_system#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.4",
+    "nyc": "^11.6.0",
+    "sinon": "^4.4.6"
+  }
+}
