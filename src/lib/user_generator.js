@@ -10,6 +10,7 @@ const generator = {
     for (let i = 0; i < numUserGenerate; i++) {
       result.push(
         new User({
+          id: faker.random.uuid(),
           name: faker.name.findName(),
           email: faker.internet.email(),
           website: faker.internet.url(),

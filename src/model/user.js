@@ -1,5 +1,8 @@
+import userStatus from "@app/src/model_helpers/user_status";
+import _ from "lodash";
 export default class {
   constructor(fromUser) {
+    this.id = fromUser.id;
     this.name = fromUser.name;
     this.email = fromUser.email;
     this.website = fromUser.website;
@@ -12,5 +15,17 @@ export default class {
 
   get ModelName() {
     return "User";
+  }
+
+  get IsActive() {
+    return _.isEqual(userStatus.ACTIVE, this.status);
+  }
+
+  get IsInActive() {
+    return _.isEqual(userStatus.INACTIVE, this.status);
+  }
+
+  get IsNotResponsive() {
+    return _.isEqual(userStatus.NOT_RESPONSIVE, this.status);
   }
 }

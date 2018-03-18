@@ -1,5 +1,4 @@
 import _ from "lodash";
-import user_generator from "@app/src/lib/user_generator";
 import model_rule_executor from "@app/src/model_rule_executor";
 import model_rule_user from "@app/src/model_rules/user";
 
