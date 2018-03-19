@@ -11,7 +11,7 @@ export default users => {
   for (let i in shadowUsers) {
     result = executor.evaluate(shadowUsers[i]);
     if (!_.isEqual(result, shadowUsers[i])) {
-      changes.push(result);
+      changes.push(shadowUsers[i]);
     }
     shadowUsers[i] = result;
   }

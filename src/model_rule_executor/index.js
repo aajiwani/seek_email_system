@@ -5,9 +5,9 @@ export default class {
     this.rules = model_rules;
   }
 
-  evaluate(model) {
+  evaluate(model, additionalParams = null) {
     for (let rule of this.rules) {
-      model = rule.Apply(model);
+      model = rule.Apply(model, additionalParams);
     }
     return model;
   }

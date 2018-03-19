@@ -1,18 +1,16 @@
-import moment from "moment";
 import _ from "lodash";
+import moment from "moment";
 
 /**
  * Transforms data to add more meaning
  * @param {UserEmail} model
  */
-const model = model => {
-  model = Object.assign({}, model, {shall_send_today: false});
-
+const model = (model, additionalParams) => {
   if (
     model.user.IsNotResponsive &&
-    moment().diff(model.last_sent, "days") >= 3
+    additionalParams.date.diff(moment(model.last_sent), "days") >= 3
   ) {
-    model.shall_send_today = true;
+    model = Object.assign({}, model, {shall_send_today: true});
   }
   return model;
 };

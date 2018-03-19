@@ -10,10 +10,10 @@ export default class {
     return "User";
   }
 
-  Apply(model) {
+  Apply(model, additionalParams) {
     if (_.isEqual(model.ModelName, this.ApplicableTo)) {
       for (let rule of Rules) {
-        model = rule(model);
+        model = rule(model, additionalParams);
       }
     }
 
