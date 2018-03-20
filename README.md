@@ -11,6 +11,8 @@ Make sure that `node` and `yarn` are installed before proceeding further.
 Server could be started by running
 `yarn start` under root folder. Server runs on port 3001, please take note that this port should be available and not binded to anything else.
 
+All the codes are covered with tests, please use `yarn test` to perform the tests and generate an HTML report under coverage.
+
 ## Client
 
 Client could be started by running
