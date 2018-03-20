@@ -37,6 +37,9 @@ function StatusAvatar(props) {
     case "In Active":
       view = <Avatar className={classes.inActive}>IA</Avatar>;
       break;
+
+    default:
+      break;
   }
   return view;
 }

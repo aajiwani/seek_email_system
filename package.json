@@ -4,17 +4,17 @@
   "description": "A test repo for SEEK Asia",
   "main": "index.js",
   "scripts": {
-    "test": "find ./tests -name '*spec.js' | xargs nyc --reporter=html --reporter=text mocha -R spec --require babel-core/register",
+    "test":
+      "find ./tests -name '*spec.js' | xargs nyc --reporter=html --reporter=text mocha -R spec --require babel-core/register",
     "start": "./node_modules/babel-cli/bin/babel-node.js index.js",
-    "link_modules": "cd src && npm link && cd .. && npm link @app/src"
+    "link_modules": "cd src && npm link && cd .. && npm link @app/src",
+    "prestart": "npm run link_modules"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aajiwani/seek_email_system.git"
   },
-  "keywords": [
-    "node"
-  ],
+  "keywords": ["node"],
   "author": "Amir Ali Jiwani <amirali.jiwani89@gmail.com>",
   "license": "MIT",
   "bugs": {

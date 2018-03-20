@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import {withStyles} from "material-ui/styles";
 import Chip from "material-ui/Chip";
-import List, {ListItem, ListItemIcon, ListItemText} from "material-ui/List";
+import List from "material-ui/List";
 import Divider from "material-ui/Divider";
 import Avatar from "material-ui/Avatar";
-import UserStatus from "./UserStatus";
 import moment from "moment";
 
 const styles = theme => ({

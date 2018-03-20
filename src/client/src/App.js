@@ -6,10 +6,8 @@ import UsersList from "./component/UsersList";
 import UserChangeStatus from "./component/UserChangeStatus";
 import EmailStatus from "./component/EmailStatus";
 import cyan from "material-ui/colors/cyan";
-import Divider from "material-ui/Divider";
 import moment from "moment";
 import Grid from "material-ui/Grid";
-import Paper from "material-ui/Paper";
 
 const styles = {
   actionButton: {

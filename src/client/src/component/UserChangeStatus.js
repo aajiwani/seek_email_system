@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {withStyles} from "material-ui/styles";
-import GridList, {GridListTile, GridListTileBar} from "material-ui/GridList";
-import IconButton from "material-ui/IconButton";
+import GridList from "material-ui/GridList";
 import Avatar from "material-ui/Avatar";
-import List, {ListItem, ListItemText} from "material-ui/List";
+import {ListItem, ListItemText} from "material-ui/List";
 import Divider from "material-ui/Divider";
 import deepOrange from "material-ui/colors/deepOrange";
 import blueGrey from "material-ui/colors/blueGrey";
@@ -20,6 +19,9 @@ const tileStyles = status => {
 
     case "In Active":
       return blueGrey[300];
+
+    default:
+      return;
   }
 };
 
