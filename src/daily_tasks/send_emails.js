@@ -18,8 +18,6 @@ export default (userEmails, date = moment()) => {
       sentEmailTo.push(shadowData[i]);
       shadowData[i].UpdateLastSent();
     }
-    //shadowData[i].UpdateLastSent();
-    // = result;
   }
 
   return {

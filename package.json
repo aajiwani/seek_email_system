@@ -8,7 +8,8 @@
       "find ./tests -name '*spec.js' | xargs nyc --reporter=html --reporter=text mocha -R spec --require babel-core/register",
     "start": "./node_modules/babel-cli/bin/babel-node.js index.js",
     "link_modules": "cd src && npm link && cd .. && npm link @app/src",
-    "prestart": "npm run link_modules"
+    "prestart": "npm run link_modules",
+    "pretest": "npm run link_modules"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,12 @@
     "faker": "^4.1.0",
     "lodash": "^4.17.5",
     "moment": "^2.21.0"
+  },
+  "nyc": {
+    "exclude": [
+      "src/model_rules/user_email/index.js",
+      "src/model_rules/user/index.js",
+      "index.js"
+    ]
   }
 }
